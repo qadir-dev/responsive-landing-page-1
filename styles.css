@@ -11,15 +11,6 @@
   box-sizing: border-box;
 }
 
-.btn {
-  position: absolute;
-  padding: 1rem 2rem;
-  outline: none;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-}
-
 a {
   text-decoration: none;
   transition: 0.3s;
@@ -174,4 +165,109 @@ nav {
 
 .footer__links a:hover {
   color: var(--primary-color);
+}
+
+/**/
+
+.btn {
+  position: absolute;
+  padding: 10px 20px;
+  background: #fff;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0;
+}
+
+
+.btn-ne {
+  animation: moveNE 2s ease-in-out forwards;
+}
+
+.btn-nw {
+  animation: moveNW 2s ease-in-out forwards;
+}
+
+.btn-sw {
+  animation: moveSW 2s ease-in-out forwards;
+}
+
+.btn-se {
+  animation: moveSE 2s ease-in-out forwards;
+}
+
+
+@keyframes moveNE {
+  0% {
+    top: -80px;
+    right: -80px;
+    opacity: 0;
+  }
+  50% {
+    top: 25%;
+    right: 5%;
+    opacity: 1;
+  }
+  100% {
+    top: 35%;
+    right: 15%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveNW {
+  0% {
+    top: -80px;
+    left: -80px;
+    opacity: 0;
+  }
+  50% {
+    top: 25%;
+    left: 5%;
+    opacity: 1;
+  }
+  100% {
+    top: 35%;
+    left: 15%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveSW {
+  0% {
+    bottom: -80px;
+    left: -80px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 25%;
+    left: 5%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 35%;
+    left: 15%;
+    opacity: 1;
+  }
+}
+
+@keyframes moveSE {
+  0% {
+    bottom: -80px;
+    right: -80px;
+    opacity: 0;
+  }
+  50% {
+    bottom: 25%;
+    right: 5%;
+    opacity: 1;
+  }
+  100% {
+    bottom: 35%;
+    right: 15%;
+    opacity: 1;
+  }
 }
